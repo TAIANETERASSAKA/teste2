@@ -27,8 +27,8 @@ public class gerente extends usuario {
             System.out.println("4: Cadastrar voo");
             System.out.println("5: Alterar voo");
             System.out.println("6: Excluir voo");
-            System.out.println("7: Gerenciar funcionario");
-            System.out.println("8: Gerar Relatórios");
+            System.out.println("7: Cadastra funcionario");
+            System.out.println("8: Gerar Relat�rios");
             System.out.println("9: Sair");
 
 
@@ -88,9 +88,6 @@ public class gerente extends usuario {
             }
             }while(respostaGerente != 9);
     }
-    
-    
-
 
 
     public void cadastraAviao(){
@@ -105,6 +102,9 @@ public class gerente extends usuario {
 
         aviao a = new aviao(id_aviao, modelo_aviao, ano_aviao, capacidade_aviao_passageiros);
         listaAvioes.add(a);
+
+        arquivoAviao arquivo = new arquivoAviao();
+        arquivo.inserirAviao(a);
 
         a.setRelatorioAviao();
     }
@@ -133,6 +133,10 @@ public class gerente extends usuario {
 
         voos v = new voos(id_voo, destino_voo, origem_voo, status_voo, time_saida_voo, time_chegada_voo, preco_passagem );
         listaVoos.add(v);
+
+
+        arquivoVoo arquivo = new arquivoVoo();
+        arquivo.inserirVoo(v);
 
         v.setRelatorioVoos();
 
@@ -173,7 +177,7 @@ public class gerente extends usuario {
     }
 
     public void cadastraFuncionario(){
-        int gerenteOUcliente_funcionario = 2; 
+        int gerenteOUcliente_funcionario = 0; 
 
         System.out.println("Gerenciar funcionario");
         System.out.println("Cadastro de funcionário");
@@ -188,7 +192,12 @@ public class gerente extends usuario {
         String tarefa = ler.next();
 
         funcionario f = new funcionario(cpf_funcionario, email_funcionario, nome_funcionario, gerenteOUcliente_funcionario, tarefa);
+        //adiciona no array funcionarios
         listaFuncionarios.add(f);
+
+        //adiciona no arquivo txt de usuarios 
+        arquivoUsuario arquivo = new arquivoUsuario();
+        arquivo.inserirUsuario(f);
 
         f.setRelatorioFuncionario();
     }

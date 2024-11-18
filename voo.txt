@@ -1,0 +1,2 @@
+Id: 5, Origem: ribeirao, Destino: maceio, Horï¿½rio saï¿½da: 1812, Horï¿½rio chegada: 1912, Status: Ativo, Preço base da passagem: 503.0, Status: realizar
+Id: 9, Origem: saopaulo, Destino: japoa, Horï¿½rio saï¿½da: 1202, Horï¿½rio chegada: 1302, Status: Ativo, Preço base da passagem: 7934.0, Status: reazliar

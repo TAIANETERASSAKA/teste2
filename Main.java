@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 public class Main {
   public static void main(String[] args) {
       int tipoUsuario, respostaTipoAcao, gerenteOUcliente;
@@ -44,18 +43,22 @@ public class Main {
                 System.out.println("Insira seu CPF");
                 cpf = ler.nextLong();
 
-                System.out.println("Digite 1 se você for gerente, digite 0 se for cliente");
+                System.out.println("Digite 1 se você for gerente, digite 2 se for cliente");
                 gerenteOUcliente = ler.nextInt();
-                if(gerenteOUcliente == 0){
-                     cliente c = new cliente(cpf, email, nome, gerenteOUcliente);
-                    System.out.println("Gerente " + c.getNome() + " cadastrado com sucesso!");
-                    System.out.println("Você tem permissão de gerente: " + c.getPermissao());
-                    System.out.println("Enviamos um link para confirmacao de cadastro no seu email " + c.getEmail());
+                if(gerenteOUcliente == 2){
+                    cliente c = new cliente(cpf, email, nome, gerenteOUcliente);
+
+                    arquivoUsuario arquivo = new arquivoUsuario();
+                    arquivo.inserirUsuario(c);
+
+                    System.out.println("Ol� " + c.getNome() +"!" );
+
                 }else if(gerenteOUcliente ==1 ){
                     gerente g = new gerente(cpf, email, nome, gerenteOUcliente);
-                    System.out.println("Olá " + g.getNome() +"!");
-                    System.out.println("Você tem permissão de gerente: " + g.getPermissao());
-                    System.out.println("Enviamos um link para confirmacao de cadastro no seu email " + g.getEmail());
+
+                    arquivoUsuario arquivo = new arquivoUsuario();
+                    arquivo.inserirUsuario(g);
+                    System.out.println("Gerente " + g.getNome()+ " cadastrado com sucesso!");
                 }
 
                 

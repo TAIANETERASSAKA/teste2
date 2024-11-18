@@ -70,7 +70,7 @@ public class passagem{
     
     //METODOS PARA EXIBIR PASSAGEM
     public void mostrarPassagem(){
-        System.out.println("INFORMAÃ‡Ã•ES DA PASSAGEM");
+        System.out.println("INFORMAÇÕES DA PASSAGEM");
         System.out.println("Titular: " + getDono().getNome());
         System.out.println("ID voÃ´: " + getVoo().getId());
         System.out.println("Origem: " + getVoo().getOrigem());

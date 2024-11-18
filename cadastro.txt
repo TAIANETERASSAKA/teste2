@@ -1,0 +1,4 @@
+Nome: jordana, Email: jordana@usp.br, CPF: 493248329048, Permiss�o: true, Tipo: Gerente
+Nome: joao, Email: joao@usp.br, CPF: 3482374984832, Permiss�o: false, Tipo: Cliente
+Nome: winder, Email: winder@usp.br, CPF: 439287472394, Permiss�o: false, Tipo: Funcion�rio
+Nome: I, Email: I@USP.BR, CPF: 4328748723344, Permiss�o: false, Tipo: Funcion�rio

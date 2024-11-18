@@ -3,6 +3,7 @@ public abstract class usuario{
     protected String email ;
     protected String nome;
     protected boolean permissao;
+    protected boolean is_funcionario;
 
     //m√©todos construtores
     public usuario(long CPF, String email, String nome, int gerenteOUcliente){
@@ -11,12 +12,24 @@ public abstract class usuario{
         this.nome = nome;
         if(gerenteOUcliente == 1){
             this.permissao = true;
-        }else{
+            this.is_funcionario = false;
+        }else if(gerenteOUcliente == 2){
             this.permissao = false;
+            this.is_funcionario = false;
+        }else{
+            this.is_funcionario = true;
+        }
+
+        if(nome.length()<4){
+            throw new RuntimeException ("Nome deve ter no mÌnimo 3 caracteres");
         }
     }
 
-    //m√©todos getters
+    //mÈtodos getters
+    public boolean getIs_funcionario(){
+        return is_funcionario;
+    }
+
     public long getCPF(){
         return CPF;
     }
@@ -33,7 +46,7 @@ public abstract class usuario{
         return permissao;
     }
 
-    //metodos setters
+    //mÈtodos setters
     public void setEmail(String email){
         this.email = email;
     }
@@ -48,7 +61,7 @@ public abstract class usuario{
     }    
 
 
-    //metodos abstratos
+    //mÈtodos abstratos
     public abstract void menu();
     
 }

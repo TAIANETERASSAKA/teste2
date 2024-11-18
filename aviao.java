@@ -1,4 +1,7 @@
-public class aviao{
+
+import java.io.Serializable;
+
+public class aviao implements Serializable{
     private int id;
     private String modelo;
     private int ano;

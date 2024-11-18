@@ -42,51 +42,32 @@ public class voos{
     }
 
     public void setAtivo(int ativo, boolean permissao){
-        if(permissao = true){
-            this.ativo= ativo;
-        }else{
-            System.out.println("Usuário sem permissão para realizar operação");
-        }
+        this.ativo= ativo;
     }
 
     public void setDestino(String destino, boolean permissao){
-        if(permissao= true){
-            this.destino = destino;
-        }else{
-            System.out.println("Usuário sem permissão para realizar operação");
-        }
+        this.destino = destino;
+
     }
 
     public void setOrigem(String origem, boolean permissao){
-        if(permissao= true){
-            this.origem = origem;
-        }else{
-            System.out.println("Usuário sem permissão para realizar operação");
-        }
+        this.origem = origem;
+
     }
 
     public void setTime_saida(int time_saida, boolean permissao){
-        if(permissao= true){
-            this.time_saida = time_saida;
-        }else{
-            System.out.println("Usuário sem permissão para realizar operação");
-        }
+        this.time_saida = time_saida;
+
     }
 
     public void setTime_chegada(int time_chegada, boolean permissao){
-        if(permissao= true){
-            this.time_chegada = time_chegada;
-        }else{
-            System.out.println("Usuário sem permissão para realizar operação");
-        }
+        this.time_chegada = time_chegada;
+
     }
 
     public void setPreco_passagem(double preco_passagem, boolean permissao){
-        if(permissao= true){
-            this.preco_passagem = preco_passagem;
-        }else{
-            System.out.println("Usuário sem permissão para realizar operação");
-        }
+        this.preco_passagem = preco_passagem;
+      
     }
 
     public void setStatus(String status){
@@ -98,7 +79,7 @@ public class voos{
         System.out.println("Informacões do voo: ");
         System.out.println("Origem: " + this.getOrigem());
         System.out.println("Destino: " + this.getDestino());
-        System.out.println("Data saída: " + this.getTime_saida());
+        System.out.println("Data sa��da: " + this.getTime_saida());
         System.out.println("Data chegada: " + this.getTime_chegada());
         System.out.println("Preço base da passagem: " + this.getPreco_passagem());
         System.out.println("Status: " + this.getStatus());
