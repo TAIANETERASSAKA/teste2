@@ -4,13 +4,23 @@ public class passagem{
     private String categoria;
     private double preco;
     private boolean ativa;
+    private int ID;
     
     //METODO CONSTRUTOR
-    public passagem(voos voo, String categoria, cliente dono){
+    public passagem(voos voo, String categoria, cliente dono, int ID){
         this.voo = voo;
         this.categoria = categoria;
         this.dono = dono ;
         this.ativa = true;
+    }
+
+    //METODOS PARA RETORNAR E DEFINIR O ID RESPECTIVO DA PASSAGEM
+    public void setId(int id){
+        this.ID = id;
+    }
+    
+    public int getId(){
+        return ID;
     }
     
     //METODOS PARA RETORNAR E DEFINIR O VOO RESPECTIVO DA PASSAGEM
@@ -60,7 +70,7 @@ public class passagem{
         return ativa;
     }
     
-    public void setAtiva(voos v){
+    public void setAtiva(boolean ativa){
         if(ativa){
             ativa = false;
         }else{

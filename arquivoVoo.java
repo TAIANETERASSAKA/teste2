@@ -1,4 +1,7 @@
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -8,7 +11,6 @@ public class arquivoVoo {
         BufferedWriter writer = null;
     
         try {
-            // Usando 'true' para append, adicionando no final do arquivo
             writer = new BufferedWriter(new FileWriter("voo.txt", true));
 
             // Escrevendo as informações do avião no arquivo
@@ -35,9 +37,25 @@ public class arquivoVoo {
         }
     }
 
-    public void buscaAviaoID(int id){
-        
+    public void leVoos(){
+        try {
+			File arquivo = new File("voo.txt");
+			FileReader fileReader = new FileReader(arquivo ); 
+			BufferedReader bufferedReader = new BufferedReader(fileReader); 
+
+			String registro;
+			while((registro = bufferedReader.readLine()) != null) {
+				System.out.println(registro); 
+			}
+
+			bufferedReader.close(); 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
     }
+		
 }
+
+
 
